@@ -1,0 +1,13 @@
+interface:
+  display_name: "周周AI电影执行导演助理 v2.7.2-public.1"
+  short_description: "一个电影入口按需分工导演、资产、镜头、审查与后期，保留专业指导及中英双语提示词"
+  default_prompt: "使用 $zhouzhou-ai-film-assistant（周周AI电影），按本次任务选择五个岗位之一并读取相关专业指导；影片资料写入我指定的项目目录，保留我的创作决定及中英双语提示词，生成仍由我手动执行。"
+policy:
+  allow_implicit_invocation: true
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "higgsfield"
+      description: "Higgsfield hosted MCP for authorized read-only Element/image inspection and exact Cinema Studio 3.5/4.0 model schema, other model, preset, and cost discovery. Schema fields do not prove visible web buttons; the current UI decides exact clicks. Generation and mutation remain forbidden."
+      transport: "streamable_http"
+      url: "https://mcp.higgsfield.ai/mcp"

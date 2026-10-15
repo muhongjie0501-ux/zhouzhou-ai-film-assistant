@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "assistant_version": "2.7.2-public.1",
+  "review_interval_days": 15,
+  "last_successful_refresh": "2026-09-13",
+  "refresh_status": "historical_reference",
+  "sources": {
+    "official_docs": {
+      "verified_at": "2026-09-10",
+      "scope": "Cinema Studio, prompting, CLI and MCP help",
+      "historical_status": "complete",
+      "status": "historical_reference"
+    },
+    "official_skills": {
+      "verified_at": "2026-10-07",
+      "repository": "https://github.com/higgsfield-ai/skills",
+      "repository_version": "0.13.0",
+      "previous_review_commit": "d071406147a37b835bed09543d85ab3e9bd85c7d",
+      "current_review_commit": "f83af0bc1d937c8119099a11f8ebbf5e6fb99819",
+      "readme_skill_count": 8,
+      "review_note": "MIT-licensed upstream revision reviewed for compatible API-discovery guidance; companion Skills are not bundled or assumed installed.",
+      "historical_status": "complete",
+      "status": "historical_reference"
+    },
+    "cli": {
+      "verified_at": "2026-09-13",
+      "catalog_schema_verified_at": "2026-09-13",
+      "model_count": 91,
+      "workflow_count": 19,
+      "studio_3_5_workflow": "cinematic_studio_video_3_5",
+      "studio_4_0_workflow": "cinematic_studio_video_4_0",
+      "schema_status": "Historical callable schema evidence dated 2026-09-13; installation and authentication are not verified for the reader.",
+      "seedance_2_5_model_rules": {
+        "t2v_reference_media_allowed": false,
+        "omni_reference_minimum_media_items": 1,
+        "maximum_total_reference_media_items": 50,
+        "maximum_image_items_including_start_and_end": 30,
+        "video_edit_video_reference_count": 1,
+        "video_extension_minimum_video_references": 1,
+        "video_extension_requires_extension_mode": true,
+        "start_and_end_images_only_in_omni_reference": true
+      },
+      "studio_3_5_schema": {
+        "display_name": "Cinematic Studio Video 3.5",
+        "duration_default_seconds": 15,
+        "duration_range_enumerated": false,
+        "cost_validation_min_seconds": 4,
+        "cost_validation_max_seconds": null,
+        "cost_validation_accepted_16_seconds": true,
+        "defaults": {
+          "aspect_ratio": "auto",
+          "enhance_prompt": false,
+          "generate_audio": false,
+          "multi_shot_mode": "custom",
+          "multi_shots": false,
+          "prompt_language": "zh",
+          "resolution": "720p"
+        },
+        "resolutions": [
+          "480p",
+          "720p",
+          "1080p"
+        ],
+        "genre_values": [
+          "auto",
+          "action",
+          "horror",
+          "comedy",
+          "noir",
+          "drama",
+          "epic"
+        ],
+        "camera_style_values": [
+          "classic_static",
+          "silent_machine",
+          "one_take",
+          "epic_scale",
+          "intimate_observer",
+          "impossible_camera",
+          "documentary_snap",
+          "raw_chaos",
+          "dreamy_flow"
+        ],
+        "color_grading_values": [
+          "naturalistic_clean",
+          "bleached_warm",
+          "hyper_neon",
+          "teal_orange_epic",
+          "sodium_decay",
+          "cold_steel",
+          "bleach_bypass",
+          "classic_bw"
+        ],
+        "light_scheme_values": [
+          "soft_cross",
+          "contre_jour",
+          "overhead_fall",
+          "window",
+          "practicals",
+          "silhouette"
+        ],
+        "multi_shot_mode_values": [
+          "auto",
+          "custom"
+        ],
+        "media_fields": [
+          "start_image",
+          "end_image",
+          "image_references",
+          "video_references",
+          "audio_references"
+        ],
+        "maximum_total_reference_media_items": 15,
+        "style_axes_and_style_prompt_mutually_exclusive": true,
+        "other_fields": [
+          "aspect_ratio",
+          "duration",
+          "enhance_prompt",
+          "generate_audio",
+          "multi_prompt",
+          "multi_shots",
+          "prompt",
+          "prompt_language",
+          "resolution",
+          "style_prompt"
+        ],
+        "underlying_model_identity_exposed": false
+      },
+      "studio_4_0_schema": {
+        "display_name": "Cinema Studio 4.0",
+        "duration_default_seconds": 5,
+        "duration_range_enumerated": false,
+        "duration_cost_validated_range_seconds": {
+          "min": 4,
+          "max": 30
+        },
+        "prompt_required": true,
+        "defaults": {
+          "aspect_ratio": "16:9",
+          "bitrate_mode": "standard",
+          "generate_audio": true,
+          "mode": "t2v",
+          "resolution": "720p"
+        },
+        "resolutions": [
+          "480p",
+          "720p",
+          "1080p"
+        ],
+        "mode_values": [
+          "t2v",
+          "omni_reference",
+          "video_edit",
+          "video_extension"
+        ],
+        "bitrate_mode_values": [
+          "standard",
+          "high"
+        ],
+        "extension_mode_values": [
+          "backward",
+          "forward"
+        ],
+        "light_values": [
+          "preset",
+          "custom",
+          "user"
+        ],
+        "light_id_values": [
+          "custom"
+        ],
+        "director_fields": [
+          "genre_id",
+          "era_id",
+          "pacing_id",
+          "camera_model_id",
+          "camera_lens_id",
+          "camera_aperture_id",
+          "color_palette",
+          "light",
+          "light_custom",
+          "light_id"
+        ],
+        "media_fields": [
+          "start_image",
+          "end_image",
+          "image_references",
+          "video_references",
+          "audio_references"
+        ],
+        "reference_rules": {
+          "t2v_reference_media_allowed": false,
+          "omni_reference_minimum_media_items": 1,
+          "maximum_total_reference_media_items": 50,
+          "maximum_image_items_including_start_and_end": 30,
+          "video_edit_video_reference_count": 1,
+          "video_extension_minimum_video_references": 1,
+          "video_extension_requires_extension_mode": true,
+          "start_and_end_images_only_in_omni_reference": true
+        },
+        "lighting_rules": {
+          "custom_requires_light_custom": true,
+          "preset_or_user_requires_noncustom_light_id": true,
+          "preset_or_user_forbids_light_custom": true,
+          "light_id_and_light_custom_mutually_exclusive": true
+        },
+        "other_fields": [
+          "aspect_ratio",
+          "duration",
+          "generate_audio",
+          "prompt",
+          "resolution"
+        ],
+        "underlying_model_identity_exposed": false
+      },
+      "baseline_cli_version": "1.1.26",
+      "command": "higgsfield",
+      "historical_status": "partial",
+      "status": "historical_reference"
+    },
+    "mcp": {
+      "verified_at": "2026-10-07",
+      "endpoint": "https://mcp.higgsfield.ai/mcp",
+      "transport": "streamable_http",
+      "auth": "Requires the reader's own authorized client connection; no credentials bundled.",
+      "video_model_count": 55,
+      "image_model_count": 45,
+      "image_model_candidates_verified": [
+        "seedream_v5_pro",
+        "soul_location",
+        "soul_cinematic",
+        "gpt_image_2_5"
+      ],
+      "seedance_2_5_discovery": true,
+      "studio_3_5_discovery": true,
+      "studio_4_0_discovery": true,
+      "exact_studio_model_ids": [
+        "cinematic_studio_video_3_5",
+        "cinematic_studio_video_4_0"
+      ],
+      "exact_studio_schema_summary": {
+        "studio_3_5": "Read-only models_get confirmed 3.5 callable fields, including multi_prompt with max 6; no web button claim.",
+        "studio_4_0": "Read-only models_get confirmed 4-30 seconds, 480p/720p/1080p, four modes, Director Panel ID fields and media roles; no full UI menu or underlying engine identity."
+      },
+      "generic_cinema_model_ids": [
+        "cinematic_studio_3_0",
+        "cinematic_studio_video",
+        "cinematic_studio_video_v2"
+      ],
+      "seedance_2_5_schema": {
+        "modes": [
+          "t2v",
+          "omni_reference",
+          "video_edit",
+          "video_extension"
+        ],
+        "duration_seconds": {
+          "min": 4,
+          "max": 30,
+          "default": 5
+        },
+        "resolutions": [
+          "480p",
+          "720p",
+          "1080p"
+        ],
+        "bitrate_modes": [
+          "standard",
+          "high"
+        ],
+        "extension_modes": [
+          "backward",
+          "forward"
+        ],
+        "media_roles": [
+          "start_image",
+          "end_image",
+          "image_references",
+          "video_references",
+          "audio_references"
+        ]
+      },
+      "historical_status": "complete",
+      "status": "historical_reference"
+    },
+    "ui_3_5": {
+      "verified_at": "2026-09-10",
+      "evidence": "user screenshots plus version-specific official tutorial",
+      "historical_status": "complete",
+      "status": "historical_reference"
+    },
+    "ui_4_0": {
+      "verified_at": "2026-10-06",
+      "evidence": "live account-page read-only check of Film setup, Camera Setup/Movement, palette, lighting, duration and resolution; user Appshots and official Help Center",
+      "historical_status": "complete",
+      "status": "historical_reference"
+    }
+  },
+  "snapshot_kind": "maintainer_historical_reference",
+  "consumer_environment_verified": false,
+  "public_snapshot_note": "Dated author observations, not verification of a reader account, installed CLI, authentication, or currently available UI. Store any project-specific recheck in that project; updating this baseline requires Skill maintenance."
+}
